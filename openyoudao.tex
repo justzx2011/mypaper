@@ -8,6 +8,7 @@
 % August 31, 2004
 
 \documentclass[10pt]{beamer}
+\usepackage{CJKutf8} %支持中文
 \usetheme{umbc4}
 
 \useinnertheme{umbcboxes}
@@ -23,10 +24,11 @@
 \title{Openyoudao}
 % \subtitle{Modeling and Computations}
 % \author[R. Rostamian]{Rouben Rostamian}
-\href{run:youdao-v0.1.mp4}\title{A story about Openyoudao}
-\date{September 17, 2012}
+\title{A story about Openyoudao}
+\date{September 10, 2013}
 \begin{document}
-
+\begin{CJK*}{UTF8}{song} %中文支持
+\CJKfamily{gkai} %中文支持
 %----------- titlepage ----------------------------------------------%
 \begin{frame}[plain]
   \titlepage
@@ -139,27 +141,25 @@ I am linuxer, Reading paper just so boring, I can't bear it any more!!!
 
 %----------- slide --------------------------------------------------%
 \begin{frame}
-  \frametitle{\Large{the structure  of openyoudao}}
+  \frametitle{\Large{the old structure  of openyoudao}}
 \begin{center} 
   \includegraphics[width=1.15\textwidth]{construct.jpg}
      
 \end{center}
 
 \end{frame}
-
 %----------- slide  --------------------------------------------------%
 \begin{frame}
-  \frametitle{\Large{what I have learnt in this process?}}
+  \frametitle{\Large{What problems exist ?}}
 \begin{itemize}
-\Large{ 
-  \item python
-  \item git
-  \item bash
-  \item js/jquery
-  \item sqlite
-  \item pip
-  \item file lock
-  \item team coding}
+{ 
+  \item 如何提取翻译正文(有道广告不错，就是把译文挡住了，囧~) 
+  \item 添加其它字典(侧边栏,ok？)
+  \item 如何防止用户刷屏(管道原来可以这样用～～～)
+  \item 离线字库(还是先人肉吧)
+  \item 如何退出程序(玩一把汇编～软中断) 
+  \item 刷新取词结果
+}
 \end{itemize}
 
 \end{frame}
@@ -168,25 +168,6 @@ I am linuxer, Reading paper just so boring, I can't bear it any more!!!
 \begin{frame}
   \frametitle{\Large{To do Next... }}
 \Huge{Give me your suggestion...}
-
-\end{frame}
-
-%----------- slide --------------------------------------------------%
-\begin{frame}
-  \frametitle{\Large{what is opensource?}}
-
-\begin{center} 
-\includegraphics[width=0.5\textwidth]{whatisopensource.jpg}
-
-\end{center}
-
-\end{frame}
-
-%----------- slide --------------------------------------------------%
-\begin{frame}
-  \frametitle{\Large{My Answer}}
-
-\Huge{Just What have we done!!!}
 
 \end{frame}
 
@@ -216,5 +197,6 @@ I am linuxer, Reading paper just so boring, I can't bear it any more!!!
 \end{center}
 \end{frame}
 
-%----------- slide 
+%----------- slide --------------------------------------------------% 
+\end{CJK*}
 \end{document}

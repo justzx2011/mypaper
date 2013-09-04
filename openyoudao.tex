@@ -21,11 +21,11 @@
 \newcommand{\arccosh}{\mathop\mathrm{arccosh}\nolimits}
 \newcommand{\Pu}{P_{\mathrm{amb}}}
 
-\title{Openyoudao}
 % \subtitle{Modeling and Computations}
-% \author[R. Rostamian]{Rouben Rostamian}
+\author[NetEase]{Bjzhangxin}
 \title{A story about Openyoudao}
 \date{September 10, 2013}
+
 \begin{document}
 \begin{CJK*}{UTF8}{song} %中文支持
 \CJKfamily{gkai} %中文支持
@@ -34,23 +34,7 @@
   \titlepage
 \end{frame}
 
-%----------- slide 
-%--------------------------------------------------%
-\begin{frame}
-  \frametitle{\Large{I am a freshman}}
-\begin{center} 
-  \includegraphics[width=0.8\textwidth]{newer.jpg}
-  
-\end{center}
-\medskip
-\quad
-\qquad
-
-I am linuxer, Reading paper just so boring, I can't bear it any more!!!
-\end{frame}
-
-%----------- slide
-%--------------------------------------------------%
+%----------- slide --------------------------------------------------%
 \begin{frame}
   \frametitle{\Large{History 2012--04--16 A boring Day!!!}}
 
@@ -63,90 +47,34 @@ I am linuxer, Reading paper just so boring, I can't bear it any more!!!
 
 I am linuxer, Reading paper just so boring, I can't bear it any more!!!
 \end{frame}
-
 %----------- slide --------------------------------------------------%
 \begin{frame}
-  \frametitle{\Large{Why reading paper on linux just so diffcult?}}
-
-\begin{center} 
-  \includegraphics[width=0.6\textwidth]{help.jpg}
-\end{center}
-
-\end{frame}
-
-%----------- slide --------------------------------------------------%
-\begin{frame}
-  \frametitle{\Large{Fuck! Writing a dictionary by myself}}
- 
-\begin{center} 
-  \includegraphics[width=0.4\textwidth]{geili.jpg}
-  
-\end{center}
-
-\end{frame}
-
-%----------- slide --------------------------------------------------%
-\begin{frame}
-  \frametitle{What shold i do? if i want to complete this program?}
-\begin{center} 
-  \includegraphics[width=1.\textwidth]{myfirststep.jpg}
-
-\end{center}
-
-\end{frame}
-%----------- slide --------------------------------------------------%
-\begin{frame}
-  \frametitle{\Large{The question ask to myself}}
+  \frametitle{\Large{How to complete it?}}
 \begin{itemize}
- \LARGE{ \item What should i do first?
-  \item How to take the word that i want?
+ \LARGE{\item How to take the word that i want?
   \item How to translate it?
   \item How to show it?}
+\end{itemize}
+\end{frame}
+%----------- slide --------------------------------------------------%
+\begin{frame}
+  \frametitle{\Large{常用取词技术}}
+\begin{itemize}
+ \LARGE{\item \href{http://nullege.com/codes/show/src@p@y@python-xlib-HEAD@trunk@examples@record_demo.py/86/Xlib.display.Display.record_create_context}{剪切板取词}
+  \item OCR取词
+  \item 语音取词}
 \end{itemize}
 \end{frame}
 
 %----------- slide --------------------------------------------------%
 \begin{frame}
-  \frametitle{\Large{The fun of programming}}
-  
-\begin{center} 
-  \includegraphics[width=1.2\textwidth]{process.jpg}
-  
-\end{center}
-
-\end{frame}
-
-%----------- slide --------------------------------------------------%
-\begin{frame}
-  \frametitle{\Large{GeiLing...}}
-  
-\begin{center} 
-  \includegraphics[width=0.7\textwidth]{challenge.jpg}
-
-\end{center}
-
-\end{frame}
-
-%----------- slide --------------------------------------------------%
-\begin{frame}
-  \frametitle{\Large{2012--05--28 A new life born: Openyoudao v0.1}}
-
-\begin{center} 
-  \includegraphics[width=0.6\textwidth]{newlife.jpg}
-\href{run:youdao-v0.1.mp4}{\beamerbutton{Openyoudao v0.1}}
-
-\end{center}
-
-\end{frame}
-
-%----------- slide --------------------------------------------------%
-\begin{frame}
-  \frametitle{\Large{the old structure  of openyoudao}}
-\begin{center} 
-  \includegraphics[width=1.15\textwidth]{construct.jpg}
-     
-\end{center}
-
+   \frametitle{剪切板取词}
+if event.type == X.ButtonRelease: \\
+    pipe = os.popen("xclip -o") \\
+    text = pipe.readline() \\
+    pipe.readlines() \\
+    pipe.close() \\
+    print "您选取的是: ", text \\
 \end{frame}
 %----------- slide  --------------------------------------------------%
 \begin{frame}
@@ -166,13 +94,6 @@ I am linuxer, Reading paper just so boring, I can't bear it any more!!!
 
 %----------- slide --------------------------------------------------%
 \begin{frame}
-  \frametitle{\Large{To do Next... }}
-\Huge{Give me your suggestion...}
-
-\end{frame}
-
-%----------- slide --------------------------------------------------%
-\begin{frame}
   \frametitle{How to Join Us?}
 
 \begin{itemize}
@@ -187,14 +108,6 @@ I am linuxer, Reading paper just so boring, I can't bear it any more!!!
   
 \end{itemize}
 
-\end{frame}
-
-%----------- slide --------------------------------------------------%
-\begin{frame}
-  \frametitle{Thanks}
-\begin{center} 
-  \includegraphics[width=0.6\textwidth]{thanks.png}
-\end{center}
 \end{frame}
 
 %----------- slide --------------------------------------------------% 

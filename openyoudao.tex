@@ -9,6 +9,7 @@
 
 \documentclass[10pt]{beamer}
 \usepackage{CJKutf8} %支持中文
+\usepackage{pdfpages}
 \usetheme{umbc4}
 
 \useinnertheme{umbcboxes}
@@ -22,8 +23,9 @@
 \newcommand{\Pu}{P_{\mathrm{amb}}}
 
 % \subtitle{Modeling and Computations}
+\subtitle{A opensource dict client of youdao for linux}
 \author[NetEase]{Bjzhangxin}
-\title{A story about Openyoudao}
+\title{Openyoudao}
 \date{September 10, 2013}
 
 \begin{document}
@@ -58,11 +60,11 @@ I am linuxer, Reading paper just so boring, I can't bear it any more!!!
 \end{frame}
 %----------- slide --------------------------------------------------%
 \begin{frame}
-  \frametitle{\Large{常用取词技术}}
-\begin{itemize}
- \LARGE{\item \href{http://nullege.com/codes/show/src@p@y@python-xlib-HEAD@trunk@examples@record_demo.py/86/Xlib.display.Display.record_create_context}{剪切板取词}
-  \item OCR取词
-  \item 语音取词}
+  \frametitle{\Large{常用开源取词技术}}
+\LARGE\begin{itemize}
+ {\item \href{http://nullege.com/codes/show/src@p@y@python-xlib-HEAD@trunk@examples@record_demo.py/86/Xlib.display.Display.record_create_context}{剪切板取词}
+  \item \href{https://code.google.com/p/tesseract-ocr/}{OCR取词}
+  \item \href{http://www.athoughtabroad.com/2013/05/22/using-google-s-speech-recognition-web-service-with-python}{语音取词}}
 \end{itemize}
 \end{frame}
 
@@ -75,6 +77,76 @@ if event.type == X.ButtonRelease: \\
     pipe.readlines() \\
     pipe.close() \\
     print "您选取的是: ", text \\
+\end{frame}
+%----------- slide --------------------------------------------------%
+\begin{frame}
+   \frametitle{OCR取词取词}
+   \includegraphics[width=1.2\textwidth]{ocr.jpg}
+   %imgpath = os.path.join(tmpdir, "img.jpg") \\
+   %img = requests.get(imgurl) \\
+   %with open(umgpath,'w') as f: \\
+   %f.write(img.content) \\
+   %os.popen('tesseract %s %s' % (IMG_PATH, TEXT_PATH[:-4])) \\ 
+   %with open(textpath) as f: \\
+   %word = f.read().strip('n') \\
+\end{frame}
+
+%----------- slide --------------------------------------------------%
+\begin{frame}
+  \frametitle{\Large{如何在线翻译}}
+\LARGE\begin{itemize}
+ {\item 目前流行的在线翻译网站
+  \item 译文下载
+  \item 页面重构}
+\end{itemize}
+\end{frame}
+
+%----------- slide --------------------------------------------------%
+%\begin{frame}
+%  \frametitle{\Large{流行的在线翻译网站}}
+%\LARGE\begin{itemize}
+%  {%\item \href{http://dict.youdao.com/search?q=}{有道字典}
+%   %\item \href{http://www.iciba.com/}{爱词霸}
+%   \item \href{http://translate.google.cn/#en/zh-CN/}{谷歌翻译}}
+%   }
+%\end{itemize}
+%\end{frame}
+
+%----------- slide --------------------------------------------------%
+\begin{frame}
+  \frametitle{\Large{流行的在线翻译网站}}
+\LARGE\begin{itemize}
+ {\item \href{http://dict.youdao.com/search?q=}{有道字典}
+  \item \href{http://www.iciba.com/}{爱词霸}
+  \item \href{http://translate.google.cn/\#en/zh-CN/}{谷歌翻译}}
+\end{itemize}
+\end{frame}
+%----------- slide --------------------------------------------------%
+\begin{frame}
+   \frametitle{译文下载}
+   curl -s -o origin.html http://dict.youdao.com/search?q=youdao
+\end{frame}
+%----------- slide --------------------------------------------------%
+\begin{frame}
+   \frametitle{页面重构}
+\LARGE\begin{itemize}
+ {\item 提取正文
+  \item 布局文件本地化
+  \item 修复部分js
+ }
+\end{itemize}
+\end{frame}
+%----------- slide --------------------------------------------------%
+\begin{frame}
+   \frametitle{主流浏览器内核}
+\Large\begin{itemize}
+ {\item Webkit
+  \item Gecko(Firefox内核)
+  \item Presto(Opera前内核)
+  \item Blink(Chrome的未来内核)
+  \item Trident(IE内核)
+ }
+\end{itemize}
 \end{frame}
 %----------- slide  --------------------------------------------------%
 \begin{frame}
@@ -89,9 +161,18 @@ if event.type == X.ButtonRelease: \\
   \item 刷新取词结果
 }
 \end{itemize}
-
 \end{frame}
 
+%----------- slide --------------------------------------------------%
+\begin{frame}
+   \frametitle{程序设计原则}
+\Large\begin{itemize}
+ {\item 界面上永远不许有按钮
+  \item 主程序中既是测试程序，不许有功能模块
+  \item 所有功能模块保持最大化的独立，尤其是界面和程序不许纠缠
+ }
+\end{itemize}
+\end{frame}
 %----------- slide --------------------------------------------------%
 \begin{frame}
   \frametitle{How to Join Us?}
